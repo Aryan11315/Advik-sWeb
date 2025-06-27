@@ -1,186 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Cards</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: cadetblue;
+      color: coral;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logoimg {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+    }
+
+    li {
+      cursor: pointer;
+    }
+
+    .lgnbtn {
+      background-color: cornflowerblue;
+      color: white;
+      border: none;
+      height: 40px;
+      width: 70px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cardcontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: aqua;
+      height: 300px;
+      width: 200px;
+      border-radius: 15px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .img {
+      height: 120px;
+      width: 120px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .pa {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .button {
+      background-color: blue;
+      color: chartreuse;
+      border: none;
+      border-radius: 15px;
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      ul {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 45vw;
+        height: auto;
+      }
+
+      .img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        width: 80vw;
+      }
+
+      .img {
+        width: 80px;
+        height: 80px;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .navbar {
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <Style>
-        .card{
-            background-color: aqua;
-            height:250px ;
-            width: 210px;
-            border-radius: 15px;
-            padding: 10px;
-            
-    
-        }
-        
-        
-.pa{
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-}
+  <nav class="navbar">
+    <img src="8.jpg" alt="" class="logoimg" />
+    <ul>
+      <a href="index.html"><li>Home</li></a>
+      <li>Tablets</li>
+      <li>Mobiles</li>
+      <li>Laptops</li>
+      <li>Watches</li>
+      <li>Help</li>
+    </ul>
+    <a href="login.html"><button class="lgnbtn">Login</button></a>
+  </nav>
 
-.button{
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    width: 75px;
-    text-align: center;
-    background-color: blue;
-    border: none;
-    border-radius: 15px;
-    color: chartreuse;
-    margin-left: 55px;
-    margin-top: 15px;
-    
-}
-.img{
-    height: 65%;
-    width: 65%;
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: center;
-    margin-left: 32px;
-    margin-top:10px ;
-    border-radius: 10px;
-} 
-.heading{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: coral;
-    height: 60px;
-    text-align: center;
-}
-*{
-    margin: 0;
-    padding: 0;
-}
-.cardcontainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.cardinner{
-    display: flex;
-    gap: 40px;
-}
-.button:hover{
-    cursor: pointer;
-}
-ul{
-    display: flex;
-    list-style: none;
-    gap:20px
-}
-.logoimg{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    background-color: cadetblue;
-    align-items: center;
-    color:coral;
-}
-.lgnbtn{
-    background-color:cornflowerblue;
-    color: white;
-    border: none;
-    height: 40px;
-    width: 70px;
-    margin-right: 10px;
-}
-li:hover{
-    cursor: pointer;
-}
-    </Style>
-
-    <nav class="navbar">
-        <img src="8.jpg" alt="" class="logoimg">
-        <ul>
-            <li>Home</li>
-            <li>Tablets</li>
-            <li>Mobiles</li>
-            <li>Laptops</li>
-            <li>Watches</li>
-            <li>Help</li>
-        </ul>
-        <button class="lgnbtn">login</button>
-    </nav>
-    <br>
-    <div class="cardcontainer">
-        <div class="cardinner">
+  <div class="cardcontainer">
     <div class="card">
-        <p class="pa">Lenovo</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.BqovwyUqHzvOW1BwrZxWiQHaHa?rs=1&pid=ImgDetMain" alt="" class="img">
+      <img src="https://th.bing.com/th/id/OIP.BqovwyUqHzvOW1BwrZxWiQHaHa?rs=1&pid=ImgDetMain" alt="" class="img" />
+      <p class="pa">Lenovo</p>
+      <button class="button">+Add</button>
     </div>
     <div class="card">
-        <p class="pa">Samsung</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img">
+      <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img" />
+      <p class="pa">Samsung</p>
+      <button class="button">+Add</button>
     </div>
     <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
+      <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt="" class="img" />
+      <p class="pa">Firestick</p>
+      <button class="button">+Add</button>
     </div>
     <div class="card">
-        <p class="pa">Samsung</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img">
+      <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img" />
+      <p class="pa">Samsung</p>
+      <button class="button">+Add</button>
     </div>
-    </div>
-    <div class="cardinner">
-    <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Samsung</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Samsung</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img">
-    </div>
-    </div>
-    <div class="cardinner">
-    <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Samsung</p>
-        <button class="button">+Add</button>
-        <img src="https://th.bing.com/th/id/OIP.WMSjSwcdm0_MXVeviOFpTwHaG4?rs=1&pid=ImgDetMain" alt="" class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
-    </div>
-    <div class="card">
-        <p class="pa">Firestick</p>
-        <button class="button">+Add</button>
-        <img src="https://techkrams.de/wp-content/uploads/2015/09/fire-8.jpg" alt=""  class="img">
-    </div>
-    </div>
-    </div>
+    <!-- Repeat cards as needed -->
+  </div>
 </body>
 </html>
